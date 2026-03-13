@@ -1,8 +1,9 @@
-package com.example.echonavai;
+package com.example.safestrider.vision;
 
 import android.graphics.RectF;
 
 public class Detection {
+
     private final String label;
     private final float confidence;
     private final RectF box;
@@ -23,5 +24,17 @@ public class Detection {
 
     public RectF getBox() {
         return box;
+    }
+
+    public float getCenterX() {
+        return box.centerX();
+    }
+
+    public float getCenterY() {
+        return box.centerY();
+    }
+
+    public float getArea() {
+        return box.width() * box.height();
     }
 }

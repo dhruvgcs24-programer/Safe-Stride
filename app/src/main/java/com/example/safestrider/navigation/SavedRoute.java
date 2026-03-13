@@ -1,4 +1,4 @@
-package com.example.echonavai;
+package com.example.safestrider.navigation;
 
 import java.util.List;
 

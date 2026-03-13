@@ -1,4 +1,4 @@
-package com.example.echonavai;
+package com.example.safestrider.navigation;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -24,6 +24,11 @@ public class RouteManager {
 
     public void saveRoute(SavedRoute route) {
         List<SavedRoute> routes = getAllRoutes();
+
+        if (routes.size() > 20) {
+            routes.remove(0);
+        }
+
         routes.add(route);
 
         String json = gson.toJson(routes);
@@ -31,6 +36,7 @@ public class RouteManager {
     }
 
     public List<SavedRoute> getAllRoutes() {
+
         String json = preferences.getString(KEY_ROUTES, null);
 
         if (json == null || json.isEmpty()) {
@@ -38,6 +44,7 @@ public class RouteManager {
         }
 
         SavedRoute[] routesArray = gson.fromJson(json, SavedRoute[].class);
+
         if (routesArray == null) {
             return new ArrayList<>();
         }
@@ -46,6 +53,7 @@ public class RouteManager {
     }
 
     public SavedRoute getRouteByName(String destinationName) {
+
         List<SavedRoute> routes = getAllRoutes();
 
         for (SavedRoute route : routes) {

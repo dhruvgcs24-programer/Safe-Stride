@@ -1,4 +1,4 @@
-package com.example.echonavai;
+package com.example.safestrider.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.ImageFormat;

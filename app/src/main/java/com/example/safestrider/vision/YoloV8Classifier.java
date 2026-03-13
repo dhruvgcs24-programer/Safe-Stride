@@ -1,4 +1,4 @@
-package com.example.echonavai;
+package com.example.safestrider.vision;
 
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;

@@ -1,4 +1,4 @@
-package com.example.echonavai;
+package com.example.safestrider;
 
 import android.content.Context;
 

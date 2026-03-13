@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Eye shape -->
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M12,4C7,4 3,8 2,12c1,4 5,8 10,8s9,-4 10,-8c-1,-4 -5,-8 -10,-8z"/>
+
+    <!-- Inner pupil -->
+    <path
+        android:fillColor="#06B6D4"
+        android:pathData="M12,9a3,3 0 1,0 0.001,0z"/>
+</vector>
